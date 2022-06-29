@@ -1,4 +1,8 @@
 <app-shopping-list-edit></app-shopping-list-edit>
 <hr>
 <mat-divider></mat-divider>
-<p>The list</p>
+<mat-nav-list>
+    <a href="" mat-list-item *ngFor="let ingredient of ingredients">
+        {{ ingredient.name }} ({{ ingredient.amount }})
+    </a>
+</mat-nav-list>

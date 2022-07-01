@@ -1,10 +1,10 @@
-<img src="" alt="">
-<h1 class="mat-headline">My recipe</h1>
+<img [src]="recipe.imagePath" alt="{{ recipe.name }}">
+<h1 class="mat-headline">{{ recipe.name }}</h1>
 <button mat-button>Add to Shopping List</button>
 <button mat-stroked-button>Edit Recipe</button>
 <button mat-stroked-button color="warn">Delete Recipe</button>
 <div>
-    Description
+    {{ recipe.description }}
 </div>
 <div>
     Ingredients

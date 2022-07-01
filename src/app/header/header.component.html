@@ -1,7 +1,7 @@
 <mat-toolbar>
     Recipe Book
     <nav>
-        <a href="#" mat-button>Recipes</a>
-        <a href="#" mat-button>Shopping List</a>
+        <a href="#" mat-button (click)="display('recipes')">Recipes</a>
+        <a href="#" mat-button (click)="display('shopping-list')">Shopping List</a>
     </nav>
 </mat-toolbar>

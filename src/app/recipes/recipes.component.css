@@ -1,8 +1,12 @@
 :host {
     display: grid;
-    grid-template-columns: 1fr 62vw;
+    grid-template-columns: 1fr 62vw 1fr;
 }
 
 p {
     max-width: 80ch;
+}
+
+app-recipe-detail {
+    margin: auto;
 }

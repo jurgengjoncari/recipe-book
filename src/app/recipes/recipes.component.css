@@ -1,6 +1,6 @@
-:host {
+/* :host {
     display: grid;
-    grid-template-columns: 1fr 62vw 1fr;
+    grid-template-columns: 1fr 62vw;
 }
 
 p {
@@ -9,4 +9,4 @@ p {
 
 app-recipe-detail {
     margin: auto;
-}
+} */

@@ -1,4 +1,8 @@
-<a mat-list-item href="#" (click)="onSelected()">
+<a 
+    mat-list-item
+    [routerLink]="[index]"
+    routerLinkActive="active"
+>
     {{ recipe.name }}
 </a>
 

@@ -21,11 +21,15 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const appRoutes: Routes = [
-  { path: '', component: RecipesComponent },
-  { path: 'recipes', component: RecipesComponent },
-  { path: 'recipes/:recipe', component: RecipesComponent },
+  { path: '', redirectTo: 'recipes', pathMatch: 'full' },
+  { path: 'recipes', component: RecipesComponent, children: [
+    { path: 'new', component: RecipeEditComponent },
+    { path: ':id', component: RecipeDetailComponent },
+    { path: ':id/edit', component: RecipeEditComponent },
+  ] },
   { path: 'shopping-list', component: ShoppingListComponent }
 ]
 
@@ -39,7 +43,8 @@ const appRoutes: Routes = [
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
-    RecipeItemComponent
+    RecipeItemComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

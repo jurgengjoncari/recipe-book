@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, NgForm } from "@angular/forms";
 
 import { MatDividerModule } from "@angular/material/divider";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

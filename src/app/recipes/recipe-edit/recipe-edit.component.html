@@ -1,1 +1,83 @@
-<p>recipe-edit works!</p>
+<div layout="row" layout-wrap>
+    <form>
+        <div layout="row">
+            <div layout="col">
+                <mat-form-field appearance="outline">
+                    <mat-label for="name">Name</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        name="name"
+                    >
+                </mat-form-field>
+            </div>
+        </div>
+        <div layout="row">
+            <div layout="col">
+                <mat-form-field appearance="outline">
+                    <mat-label for="imagePath ">Image URL</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        id="imagePath"
+                    >
+                </mat-form-field>
+            </div>
+        </div>
+        <div layout="row">
+            <img src="" mat-card-image alt="">
+        </div>
+        <div layout="row">
+            <div layout="col">
+                <mat-form-field appearance="outline">
+                    <mat-label for="description ">Description</mat-label>
+                    <textarea
+                        matInput
+                        id="description"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="ingredients" layout="row">
+            <div layout="col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ingredient</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                    >
+                </mat-form-field>
+            </div>
+            <div layout="col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Amount</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                    >
+                </mat-form-field>
+            </div>
+            <button class="delete-ingredient" mat-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        <div layout="row">
+            <div layout="col">
+                <button 
+                    type="submit" 
+                    mat-stroked-button 
+                    color="accent"
+                >
+                    Save
+                </button>
+                <button
+                    type="button"
+                    mat-stroked-button
+                    color="warn"
+                >
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

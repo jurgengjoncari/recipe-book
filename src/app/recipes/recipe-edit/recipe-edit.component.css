@@ -1,0 +1,23 @@
+:host {
+    width: 80ch;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 6fr 3fr 1fr;
+    gap: 8px;
+}
+
+.delete-ingredient {
+    margin-top: 0.25em;
+    margin-bottom: 1.59375em;
+}

@@ -1,24 +1,26 @@
-<img [src]="recipe.imagePath" alt="{{ recipe.name }}">
-<h1 class="mat-headline">{{ recipe.name }}</h1>
-<button 
-    mat-button 
-    color="accent"
-    (click)="addToShoppingList(recipe.ingredients)"
->
-    Add to Shopping List
-</button>
-<button 
-    mat-button
-    (click)="editItem()"
->
-    Edit Recipe
-</button>
-<button 
-    mat-button 
-    color="warn"
->
-    Delete Recipe
-</button>
+<img mat-card-image [src]="recipe.imagePath" alt="{{ recipe.name }}">
+<h1>{{ recipe.name }}</h1>
+<div class="actions">
+    <button
+        mat-button
+        color="accent"
+        (click)="addToShoppingList(recipe.ingredients)"
+    >
+        Add to Shopping List
+    </button>
+    <button
+        mat-button
+        (click)="editItem()"
+    >
+        Edit Recipe
+    </button>
+    <button
+        mat-button
+        color="warn"
+    >
+        Delete Recipe
+    </button>
+</div>
 <p class="mat-body">
     {{ recipe.description }}
 </p>

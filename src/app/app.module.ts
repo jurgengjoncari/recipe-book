@@ -22,6 +22,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
@@ -44,7 +47,7 @@ const appRoutes: Routes = [
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,10 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatIconModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

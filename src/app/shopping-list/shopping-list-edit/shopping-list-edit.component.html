@@ -1,41 +1,50 @@
-<form #form="ngForm" (ngSubmit)="onAddItem(form)">
-    <mat-form-field appearance="standard">
-        <mat-label for="name">Name</mat-label>
-        <input
-            matInput type="text"
-            id="name"
-            name="name"
-            ngModel
-            required
+<div layout="row">
+    <form #form="ngForm" (ngSubmit)="submitItem(form)">
+        <mat-form-field appearance="outline">
+            <mat-label for="name">Name</mat-label>
+            <input
+                matInput
+                type="text"
+                id="name"
+                name="name"
+                ngModel
+                required
+            >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label for="amount">Amount</mat-label>
+            <input
+                type="number"
+                matInput
+                id="amount"
+                name="amount"
+                ngModel
+                required
+            >
+        </mat-form-field>
+        <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            [disabled]="!form.valid"
         >
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label for="amount">Amount</mat-label>
-        <input
-            type="number"
-            matInput id="amount"
-            name="amount"
-            ngModel
-            required
+            {{ editMode ? 'Update' : 'Add' }}
+        </button>
+        <button
+            *ngIf="form.touched || editMode"
+            type="button"
+            mat-stroked-button
+            (click)="clearForm()"
         >
-    </mat-form-field>
-    <button
-        type="submit"
-        mat-raised-button
-        color="accent"
-        [disabled]="!form.valid"
-    >
-        Add
-    </button>
-    <button 
-        mat-raised-button 
-        color="warn"
-    >
-        Delete
-    </button>
-    <button 
-        mat-raised-button
-    >
-        Clear
-    </button>
-</form>
+            Clear
+        </button>
+        <button
+            *ngIf="editMode"
+            mat-stroked-button
+            color="warn"
+            (click)="deleteItem()"
+        >
+            Delete
+        </button>
+    </form>
+</div>

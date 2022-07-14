@@ -1,0 +1,14 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 44.72vw 1fr;
+}
+
+/* main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+} */
+
+a.active {
+    background-color: black;
+}

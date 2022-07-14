@@ -28,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
+  { path: 'recipes', redirectTo: 'recipes/0', pathMatch: 'full' },
   { path: 'recipes', component: RecipesComponent, children: [
     { path: 'new', component: RecipeEditComponent },
     { path: ':id', component: RecipeDetailComponent },

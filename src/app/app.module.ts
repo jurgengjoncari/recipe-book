@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule, NgForm } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { MatDividerModule } from "@angular/material/divider";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -25,11 +25,13 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from "@angular/material/card";
+import { RecipeEmptyComponent } from './recipes/recipe-empty/recipe-empty.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
-  { path: 'recipes', redirectTo: 'recipes/0', pathMatch: 'full' },
   { path: 'recipes', component: RecipesComponent, children: [
+    { path: '', component: RecipeEmptyComponent },
     { path: 'new', component: RecipeEditComponent },
     { path: ':id', component: RecipeDetailComponent },
     { path: ':id/edit', component: RecipeEditComponent },
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeEditComponent,
+    RecipeEmptyComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,9 @@ const appRoutes: Routes = [
     FormsModule,
     LayoutModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

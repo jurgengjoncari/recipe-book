@@ -50,7 +50,12 @@
                     formControlName="amount"
                 >
             </mat-form-field>
-            <button class="delete-ingredient" mat-button>
+            <button 
+                type="button"
+                class="delete-ingredient" 
+                mat-button
+                (click)="deleteIngredient(id)"
+            >
                 <mat-icon>delete</mat-icon>
             </button>
         </div>

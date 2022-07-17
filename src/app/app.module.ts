@@ -27,6 +27,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from "@angular/material/card";
 import { RecipeEmptyComponent } from './recipes/recipe-empty/recipe-empty.component';
+import { RecipeService } from './recipes/recipe.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
@@ -70,7 +71,7 @@ const appRoutes: Routes = [
     MatCardModule,
     ReactiveFormsModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

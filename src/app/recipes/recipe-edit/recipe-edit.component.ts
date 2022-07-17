@@ -72,7 +72,7 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipeService.addRecipe(this.recipeForm.value)
     }
-    this.router.navigate(['../', this.id], {relativeTo: this.route})
+    this.router.navigate(['../'], {relativeTo: this.route})
   }
 
   get controls() {

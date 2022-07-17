@@ -1,5 +1,5 @@
-<div layout="row">
-    <form #form="ngForm" (ngSubmit)="submitItem(form)">
+<form #form="ngForm" (ngSubmit)="submitItem(form)">
+    <div class="primary">
         <mat-form-field appearance="outline">
             <mat-label for="name">Name</mat-label>
             <input
@@ -30,21 +30,24 @@
         >
             {{ editMode ? 'Update' : 'Add' }}
         </button>
+    </div>
+    <div class="secondary">
         <button
-            *ngIf="form.touched || editMode"
+            [disabled]="!(form.touched || editMode)"
             type="button"
-            mat-stroked-button
+            mat-button
             (click)="clearForm()"
         >
             Clear
         </button>
         <button
-            *ngIf="editMode"
-            mat-stroked-button
+            [disabled]="!editMode"
+            type="button"
+            mat-button
             color="warn"
             (click)="deleteItem()"
         >
             Delete
         </button>
-    </form>
-</div>
+    </div>
+</form>

@@ -8,6 +8,8 @@ h1, p, .actions, mat-list {
     max-width: 80ch;
 }
 
-h1 {
-    text-align: center;
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }

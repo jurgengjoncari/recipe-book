@@ -70,11 +70,8 @@ export class RecipeService {
     this.recipes = recipes
     this.recipesChanged.next(this.recipes.slice())
   }
-}
-=======
   deleteIngredient(recipeId: number, ingredientId: number) {
     this.recipes[recipeId].ingredients.splice(ingredientId, 1)
     this.recipesChanged.next(this.recipes.slice())
   }
 }
->>>>>>> ea751021e62118a6a48f14b4f09bcd06f483da9e

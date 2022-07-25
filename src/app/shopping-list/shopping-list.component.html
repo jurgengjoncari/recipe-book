@@ -2,15 +2,15 @@
 <main>
     <app-shopping-list-edit></app-shopping-list-edit>
     <mat-divider></mat-divider>
-    <mat-nav-list>
-        <a
+    <mat-action-list>
+        <button
             routerLinkActive="active"
             mat-list-item
             *ngFor="let ingredient of ingredients; let i = index"
             (click)="editItem(i)"
         >
             {{ ingredient.name }} ({{ ingredient.amount }})
-        </a>
-    </mat-nav-list>
+        </button>
+    </mat-action-list>
 </main>
 <aside></aside>

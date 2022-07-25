@@ -3,14 +3,13 @@
 <div class="actions">
     <button
         mat-stroked-button
-        color="primary"
+        color="accent"
         (click)="addToShoppingList(recipe.ingredients)"
     >
         Add to Shopping List
     </button>
     <button
         mat-button
-        color="accent"
         (click)="editItem()"
     >
         Edit Recipe
@@ -27,7 +26,10 @@
     {{ recipe.description }}
 </p>
 <mat-list>
-    <mat-list-item *ngFor="let ingredient of recipe.ingredients">
+    <mat-list-item 
+        *ngFor="let ingredient of recipe.ingredients"
+        class="ingredient"
+    >
         {{ ingredient.name }} - {{ ingredient.amount }}
     </mat-list-item>
 </mat-list>

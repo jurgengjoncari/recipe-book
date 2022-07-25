@@ -12,3 +12,8 @@
 a.active {
     background-color: black;
 }
+
+.ingredient {
+    display: flex;
+    justify-content: space-between;
+}

@@ -13,3 +13,8 @@ h1, p, .actions, mat-list {
     justify-content: flex-end;
     gap: 8px;
 }
+
+.ingredient {
+    display: flex;
+    justify-content: space-between;
+}
